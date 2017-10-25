@@ -1,0 +1,23 @@
+---
+title: "ds_problem 1"
+output: html_document
+---
+
+### Preperation
+```{r warming = FALSE}
+library(tidyverse)
+library(readr)
+library(janitor)
+library(ggplot2)
+```
+
+### Load and clean data
+```{r}
+data_pups = read_csv("./FAS_pups.csv") %>% 
+  clean_names() %>%  
+  gather(key = index, value = PD_outcome, pd_ears:pd_walk) %>%
+  filter(!is.na(PD_outcome)) 
+
+head(data_pups)
+```
+
