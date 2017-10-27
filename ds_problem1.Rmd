@@ -1,5 +1,7 @@
 ---
 title: "ds_problem 1"
+author: "Lu Gan"
+date: "10/26/2017"
 output: html_document
 ---
 
