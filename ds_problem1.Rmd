@@ -26,8 +26,6 @@ head(data_pups)
 ### Density Plot
 ```{r}
 data_pups %>%
-group_by(index, PD_outcome) %>%
-  summarize(number = n()) %>%
   ggplot(aes(x = PD_outcome, y = index, fill = index)) +
   geom_density_ridges(scale = 0.85) +
   labs(title = "Distribution of Post-natal Days for Each Developmental Landmark", 
